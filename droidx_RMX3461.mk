@@ -12,13 +12,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/realme/RMX3461/device.mk)
 
 # Inherit some common superior stuff.
-$(call inherit-product, vendor/superior/config/common.mk)
+$(call inherit-product, vendor/droidx/config/common_full_phone.mk)
 
-BUILD_WITH_GAPPS := true
+DROIDX_GAPPS := true
 TARGET_INCLUDE_MATLOG := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
-PRODUCT_NAME := superior_RMX3461
+PRODUCT_NAME := droidx_RMX3461
 PRODUCT_DEVICE := RMX3461
 PRODUCT_MANUFACTURER := realme
 PRODUCT_BRAND := realme
@@ -35,3 +35,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=$(PRODUCT_SYSTEM_NAME)
 
 BUILD_FINGERPRINT := realme/RMX3461/RE54BFL1:13/TP1A.220905.001/R.e073d6_1f2d3_143:user/release-keys
+
+# Droidx Props
+DROIDX_BUILD_TYPE := OFFICIAL
